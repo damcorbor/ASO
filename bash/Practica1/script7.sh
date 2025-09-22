@@ -1,18 +1,17 @@
 #!/bin/bash
-echo "no corregido"
 
 directorio = $1
 
-# Comprobar que se pasa un parametro
+#comprobando q se pasa un directorio
 if [ $# -ne 1 ]; then
     echo "Debes indicar un solo directorio"
-    exit 1
+    exit
 fi
 
 # Comprobar que el directorio existe
 if [ ! -d "$directorio" ]; then
     echo "El directorio '$directorio' no existe."
-    exit 1
+    exit
 fi
 
 # Obtener la fecha actual
