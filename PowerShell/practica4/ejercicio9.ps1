@@ -5,12 +5,12 @@ Ejercicio 9. Escribir un programa que almacene la cadena de caracteres contrase�
 Clear-Host
 
 [string] $password = "contraseña"
-[string] $input = ""
+[string] $entrada = ""
 
-while ($input -ne $password) {
-    $input = Read-Host "Introduce la contraseña"
+while ($entrada -ne $password) {
+    $entrada = Read-Host "Introduce la contraseña"
 
-    if ($input -ne $password) {
+    if ($entrada -ne $password) {
         Write-Output "Contraseña incorrecta"
     }
 }
