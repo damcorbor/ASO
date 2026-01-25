@@ -6,6 +6,18 @@ Clear-Host
 
 [int] $altura = Read-Host "Introduce la altura del triangulo"
 
-for ($i = $altura; $i -ge 1; $i--) {
-    Write-Output ("*" * $i)
+for ($fila = 1; $fila -le $altura; $fila++) {
+
+    $linea = ""
+    $imparMax = (2 * $fila) - 1
+
+    for ($n = $imparMax; $n -ge 1; $n -= 2) {
+        if ($linea -eq "") {
+            $linea = "$n"
+        } else {
+            $linea = "$linea  $n"
+        }
+    }
+
+    Write-Output $linea
 }
